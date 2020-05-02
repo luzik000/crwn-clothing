@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
-import "./sing-up.styles.scss";
+import "./sign-up.styles.scss";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
 
-export default class SingUp extends Component {
+export default class SignUp extends Component {
   state = {
     displayName: "",
     email: "",
@@ -49,11 +49,11 @@ export default class SingUp extends Component {
     const { displayName, email, password, confirmPassword } = this.state;
 
     return (
-      <div className='sing-up'>
+      <div className='sign-up'>
         <h2 className='title'>I do not have an account</h2>
-        <span>Sing up with your email and password</span>
+        <span>Sign up with your email and password</span>
 
-        <form className='sing-up-form' onSubmit={this.handleSubmit}>
+        <form className='sign-up-form' onSubmit={this.handleSubmit}>
           <FormInput
             type='text'
             name='displayName'
@@ -87,10 +87,7 @@ export default class SingUp extends Component {
             required
           />
 
-          <CustomButton type='submit'>Sing Up</CustomButton>
-          <CustomButton onClick={singInWithGoogle}>
-            Sing in with Google
-          </CustomButton>
+          <CustomButton type='submit'>Sign Up</CustomButton>
         </form>
       </div>
     );

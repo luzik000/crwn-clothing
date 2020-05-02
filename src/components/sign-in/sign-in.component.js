@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
-import "./sing-in.styles.scss";
+import "./sign-in.styles.scss";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
-import { singInWithGoogle } from "../../firebase/firebase.utils";
+import { signInWithGoogle } from "../../firebase/firebase.utils";
 
-export default class SingIn extends Component {
+export default class SignIn extends Component {
   state = {
     email: "",
     password: "",
@@ -24,9 +24,9 @@ export default class SingIn extends Component {
 
   render() {
     return (
-      <div className='sing-in'>
+      <div className='sign-in'>
         <h2>I already have an account</h2>
-        <span>Sing in with your email and password</span>
+        <span>Sign in with your email and password</span>
 
         <form onSubmit={this.handleSubmit}>
           <FormInput
@@ -46,11 +46,11 @@ export default class SingIn extends Component {
             label='Password'
           />
           <div className='buttons'>
-            <CustomButton type='submit'>Sing In</CustomButton>
-            <CustomButton onClick={singInWithGoogle} isGoogleSingIn>
-              Sing in with Google
+            <CustomButton type='submit'>Sign In</CustomButton>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+              Sign in with Google
             </CustomButton>
-          </div>
+          </div> 
         </form>
       </div>
     );
